@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_web/pages/landing_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          body: Center(
-              child: Text(
-        'Halo, Semuanya!',
-        style: GoogleFonts.poppins(fontSize: 30),
-      ))),
+      home: LandingPage(),
     );
   }
 }
