@@ -5,50 +5,170 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 100,
-          vertical: 30,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              'logo.png',
-              width: 72,
-              height: 40,
+      body: Stack(
+        children: [
+          Image.asset(
+            'background.png',
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            fit: BoxFit.fill,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 100,
+              vertical: 30,
             ),
-            Row(
+            child: Column(
               children: [
-                Column(
-                  mainAxisSize: MainAxisSize.min,
+                // NOTE: NAVIGATION
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Guides',
-                      style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          color: Color(0xff11D1E3C),
-                          fontWeight: FontWeight.w500),
+                    Image.asset(
+                      'logo.png',
+                      width: 72,
+                      height: 40,
                     ),
-                    Container(
-                      width: 66,
-                      height: 2,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color(0xffFE998D),
+                    Row(
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Guides',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  color: Color(0xff11D1E3C),
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            Container(
+                              width: 66,
+                              height: 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Color(0xffFE998D),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Pricing',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  color: Color(0xff11D1E3C),
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Container(
+                              width: 66,
+                              height: 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.transparent,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Team',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  color: Color(0xff11D1E3C),
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Container(
+                              width: 66,
+                              height: 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.transparent,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Stories',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  color: Color(0xff11D1E3C),
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Container(
+                              width: 66,
+                              height: 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.transparent,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Image.asset(
+                      'btn_account.png',
+                      width: 163,
+                      height: 153,
+                    ),
+                  ],
+                ),
+
+                // NOTE: CONTENT
+
+                SizedBox(
+                  height: 75,
+                ),
+                Image.asset(
+                  'illustration.png',
+                  height: 550,
+                ),
+
+                // NOTE: FOOTER
+
+                SizedBox(
+                  height: 84,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'icon_scroll.png',
+                      width: 24,
+                    ),
+                    SizedBox(
+                      width: 13,
+                    ),
+                    Text(
+                      'Scroll to Learn More',
+                      style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
                       ),
                     ),
                   ],
                 ),
               ],
             ),
-            Image.asset(
-              'btn_account.png',
-              width: 163,
-              height: 153,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
